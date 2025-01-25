@@ -1,4 +1,4 @@
-const waitForDependencies = (dependencies) => {
+window.waitForDependencies = (dependencies) => {
   return new Promise((resolve) => {
     const check = _.throttle(() => {
       if (dependencies.every((checkFn) => checkFn())) resolve()
